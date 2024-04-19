@@ -13,13 +13,15 @@ CREATE TABLE Screen (
     ScreenID INT PRIMARY KEY,
     TheaterID INT,
     Format VARCHAR(8),
-    FOREIGN KEY (TheaterID) REFERENCES Theater(TheaterID)
+    FOREIGN KEY (TheaterID) REFERENCES Theater(TheaterID),
+    CONSTRAINT chk_Format CHECK (Format in ('Standard', 'IMAX', '4DX'))
 );
 
 CREATE TABLE Movie (
   MovieID 	INT NOT NULL PRIMARY KEY,
   Title		VARCHAR(60) NOT NULL,
-  Rating 	VARCHAR(4)
+  Rating 	VARCHAR(4),
+  CONSTRAINT chk_Rating CHECK (Rating in ('PG', 'PG13', 'R'))
 );
 
 CREATE TABLE Showing (
