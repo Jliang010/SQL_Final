@@ -14,8 +14,7 @@ CREATE TABLE Screen (
     FOREIGN KEY (TheaterID) REFERENCES Theater(TheaterID)
 );
 
-CREATE TABLE Show
-(
+CREATE TABLE Show (
     ShowID INT NOT NULL, 
     MovieID INT NOT NULL, 
     ScreenID INT NOT NULL, 
