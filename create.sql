@@ -1,6 +1,6 @@
 -- Create tables here
-hi
-:D
+--hi
+--:D
 CREATE table Theater (
 TheaterID INT NOT NULL PRIMARY KEY,
 TheaterName varchar(60),
@@ -13,11 +13,13 @@ CREATE TABLE Screen (
     Format VARCHAR(8),
     FOREIGN KEY (TheaterID) REFERENCES Theater(TheaterID)
 );
+
 CREATE TABLE MOVIE (
   MovieID 	INT NOT NULL PRIMARY KEY,
   Title		VARCHAR(60) NOT NULL,
   Rating 	VARCHAR(4)
 );
+
 CREATE TABLE Show (
     ShowID INT NOT NULL, 
     MovieID INT NOT NULL, 
