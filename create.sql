@@ -14,3 +14,13 @@ CREATE TABLE Screen (
     FOREIGN KEY (TheaterID) REFERENCES Theater(TheaterID)
 );
 
+CREATE TABLE Cutsomer
+(
+CustomerID INT NOT NULL PRIMARY KEY,
+TicketID INT NOT NULL,
+FirstName VARCHAR(60) NOT NULL,
+LastName VARCHAR(60) NOT NULL,
+
+FOREIGN KEY(TicketID) REFERENCES Ticket(TicketID)
+
+);
