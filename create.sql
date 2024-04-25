@@ -3,6 +3,8 @@
 --:D
 -- :P
 
+SET FOREIGN_KEY_CHECKS=0;
+
 CREATE table Theater (
 TheaterID INT NOT NULL PRIMARY KEY,
 TheaterName varchar(60) NOT NULL,
@@ -53,3 +55,5 @@ LastName VARCHAR(60) NOT NULL,
 FOREIGN KEY(TicketID) REFERENCES Ticket(TicketID)
 
 );
+
+SET FOREIGN_KEY_CHECKS=1;
