@@ -57,3 +57,6 @@ FOREIGN KEY(TicketID) REFERENCES Ticket(TicketID)
 );
 
 SET FOREIGN_KEY_CHECKS=1;
+
+
+-- Dummy data here
