@@ -294,7 +294,7 @@ INNER JOIN Theater t ON sc.TheaterID = t.TheaterID
 INNER JOIN Movie m ON s.MovieID = m.MovieID
 WHERE sc.Format = 'IMAX' AND t.City = 'San Diego';
 
--- Question3: What are the total ticket sales at each theaeter for Ocean Deep?
+-- Question3: What are the total ticket sales at each theaeter showing the movie Ocean Deep?
 SELECT
     Theater.TheaterName,
     SUM(Ticket.Price) AS TotalTicketSales
