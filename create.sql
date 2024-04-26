@@ -74,6 +74,20 @@ INSERT INTO Theater (TheaterID, TheaterName, City) VALUES
 
 
 -- Insert records into the Screen table
+-- Inserting data into the Theater table
+INSERT INTO Theater (TheaterID, TheaterName, City) VALUES
+(1, 'Cineworld Downtown', 'New York'),
+(2, 'Regal Cinema', 'Los Angeles'),
+(3, 'AMC Empire', 'Chicago'),
+(4, 'Cineplex Odeon', 'Houston'),
+(5, 'Landmark Theatre', 'Phoenix'),
+(6, 'SilverCity Riverport', 'Philadelphia'),
+(7, 'Sunset Drive-in', 'San Antonio'),
+(8, 'The Picture House', 'San Diego'),
+(9, 'Galaxy Cinema', 'Dallas'),
+(10, 'Metro Theatre', 'San Jose');
+
+-- Inserting data into the Screen table
 INSERT INTO Screen (ScreenID, TheaterID, Format) VALUES
 (1, 1, 'Standard'), (2, 1, 'IMAX'), (3, 1, '4DX'),
 (4, 2, 'Standard'), (5, 2, 'IMAX'), (6, 2, '4DX'),
@@ -93,8 +107,7 @@ INSERT INTO Screen (ScreenID, TheaterID, Format) VALUES
 (46, 6, 'Standard'), (47, 6, 'IMAX'), (48, 6, '4DX'),
 (49, 7, 'Standard'), (50, 7, 'IMAX');
 
-
--- Insert records into the Movie table
+-- Inserting data into the Movie table
 INSERT INTO Movie (MovieID, Title, Rating) VALUES
 (1, 'The Great Adventure', 'PG'),
 (2, 'Space Journey', 'PG13'),
@@ -107,8 +120,7 @@ INSERT INTO Movie (MovieID, Title, Rating) VALUES
 (9, 'Mountain Climb', 'R'),
 (10, 'Desert Run', 'PG');
 
-
--- Insert records into the Showing table
+-- Inserting data into the Showing table
 INSERT INTO Showing (ShowingID, MovieID, ScreenID, Date) VALUES
 (1, 1, 1, '2023-04-01 12:00:00'), (2, 2, 2, '2023-04-01 15:00:00'),
 (3, 3, 3, '2023-04-01 18:00:00'), (4, 4, 4, '2023-04-02 12:00:00'),
@@ -120,30 +132,78 @@ INSERT INTO Showing (ShowingID, MovieID, ScreenID, Date) VALUES
 (15, 5, 15, '2023-04-05 18:00:00'), (16, 6, 16, '2023-04-06 12:00:00'),
 (17, 7, 17, '2023-04-06 15:00:00'), (18, 8, 18, '2023-04-06 18:00:00'),
 (19, 9, 19, '2023-04-07 12:00:00'), (20, 10, 20, '2023-04-07 15:00:00'),
--- Continue this pattern to fill 50 entries...
-(49, 9, 49, '2023-04-25 18:00:00'), (50, 10, 50, '2023-04-25 21:00:00');
+(21, 1, 21, '2023-04-07 18:00:00'), (22, 2, 22, '2023-04-08 12:00:00'),
+(23, 3, 23, '2023-04-08 15:00:00'), (24, 4, 24, '2023-04-08 18:00:00'),
+(25, 5, 25, '2023-04-09 12:00:00'), (26, 6, 26, '2023-04-09 15:00:00'),
+(27, 7, 27, '2023-04-09 18:00:00'), (28, 8, 28, '2023-04-10 12:00:00'),
+(29, 9, 29, '2023-04-10 15:00:00'), (30, 10, 30, '2023-04-10 18:00:00'),
+(31, 1, 31, '2023-04-11 12:00:00'), (32, 2, 32, '2023-04-11 15:00:00'),
+(33, 3, 33, '2023-04-11 18:00:00'), (34, 4, 34, '2023-04-12 12:00:00'),
+(35, 5, 35, '2023-04-12 15:00:00'), (36, 6, 36, '2023-04-12 18:00:00'),
+(37, 7, 37, '2023-04-13 12:00:00'), (38, 8, 38, '2023-04-13 15:00:00'),
+(39, 9, 39, '2023-04-13 18:00:00'), (40, 10, 40, '2023-04-14 12:00:00'),
+(41, 1, 41, '2023-04-14 15:00:00'), (42, 2, 42, '2023-04-14 18:00:00'),
+(43, 3, 43, '2023-04-15 12:00:00'), (44, 4, 44, '2023-04-15 15:00:00'),
+(45, 5, 45, '2023-04-15 18:00:00'), (46, 6, 46, '2023-04-16 12:00:00'),
+(47, 7, 47, '2023-04-16 15:00:00'), (48, 8, 48, '2023-04-16 18:00:00'),
+(49, 9, 49, '2023-04-17 12:00:00'), (50, 10, 50, '2023-04-17 15:00:00');
 
-
--- Insert records into the Ticket table
+-- Inserting data into the Ticket table
 INSERT INTO Ticket (TicketID, ShowingID, Price, Seat) VALUES
 (1, 1, 12.50, 'A1'), (2, 2, 15.00, 'A2'),
 (3, 3, 14.00, 'A3'), (4, 4, 13.00, 'A4'),
 (5, 5, 16.00, 'A5'), (6, 6, 14.50, 'A6'),
 (7, 7, 12.00, 'A7'), (8, 8, 15.50, 'A8'),
 (9, 9, 13.50, 'A9'), (10, 10, 14.00, 'A10'),
--- Continue this pattern to fill 50 entries...
-(49, 49, 12.50, 'J9'), (50, 50, 15.00, 'J10');
+(11, 11, 12.50, 'B1'), (12, 12, 15.00, 'B2'),
+(13, 13, 14.00, 'B3'), (14, 14, 13.00, 'B4'),
+(15, 15, 16.00, 'B5'), (16, 16, 14.50, 'B6'),
+(17, 17, 12.00, 'B7'), (18, 18, 15.50, 'B8'),
+(19, 19, 13.50, 'B9'), (20, 20, 14.00, 'B10'),
+(21, 21, 12.50, 'C1'), (22, 22, 15.00, 'C2'),
+(23, 23, 14.00, 'C3'), (24, 24, 13.00, 'C4'),
+(25, 25, 16.00, 'C5'), (26, 26, 14.50, 'C6'),
+(27, 27, 12.00, 'C7'), (28, 28, 15.50, 'C8'),
+(29, 29, 13.50, 'C9'), (30, 30, 14.00, 'C10'),
+(31, 31, 12.50, 'D1'), (32, 32, 15.00, 'D2'),
+(33, 33, 14.00, 'D3'), (34, 34, 13.00, 'D4'),
+(35, 35, 16.00, 'D5'), (36, 36, 14.50, 'D6'),
+(37, 37, 12.00, 'D7'), (38, 38, 15.50, 'D8'),
+(39, 39, 13.50, 'D9'), (40, 40, 14.00, 'D10'),
+(41, 41, 12.50, 'E1'), (42, 42, 15.00, 'E2'),
+(43, 43, 14.00, 'E3'), (44, 44, 13.00, 'E4'),
+(45, 45, 16.00, 'E5'), (46, 46, 14.50, 'E6'),
+(47, 47, 12.00, 'E7'), (48, 48, 15.50, 'E8'),
+(49, 49, 13.50, 'E9'), (50, 50, 14.00, 'E10');
 
-
--- Insert records into the Customer table
+-- Inserting data into the Customer table
 INSERT INTO Customer (CustomerID, TicketID, FirstName, LastName) VALUES
 (1, 1, 'John', 'Doe'), (2, 2, 'Jane', 'Smith'),
 (3, 3, 'Alice', 'Wonderland'), (4, 4, 'Bob', 'Builder'),
 (5, 5, 'Charlie', 'Brown'), (6, 6, 'David', 'Blaine'),
 (7, 7, 'Eve', 'Jobs'), (8, 8, 'Frank', 'Sinatra'),
 (9, 9, 'Grace', 'Hopper'), (10, 10, 'Harry', 'Potter'),
--- Continue this pattern to fill 50 entries...
-(49, 49, 'Zoe', 'Zimmerman'), (50, 50, 'Yan', 'Yin');
+(11, 11, 'Iris', 'West'), (12, 12, 'Jack', 'Sparrow'),
+(13, 13, 'Kara', 'Danvers'), (14, 14, 'Liam', 'Neeson'),
+(15, 15, 'Mona', 'Lisa'), (16, 16, 'Nina', 'Dobrev'),
+(17, 17, 'Oliver', 'Queen'), (18, 18, 'Peter', 'Parker'),
+(19, 19, 'Quinn', 'Fabray'), (20, 20, 'Rachel', 'Green'),
+(21, 21, 'Stella', 'Gibson'), (22, 22, 'Tom', 'Hardy'),
+(23, 23, 'Uma', 'Thurman'), (24, 24, 'Victor', 'Von Doom'),
+(25, 25, 'Wendy', 'Darling'), (26, 26, 'Xavier', 'Niel'),
+(27, 27, 'Yvonne', 'Strahovski'), (28, 28, 'Zachary', 'Levi'),
+(29, 29, 'Amelia', 'Earhart'), (30, 30, 'Bruce', 'Wayne'),
+(31, 31, 'Clark', 'Kent'), (32, 32, 'Diana', 'Prince'),
+(33, 33, 'Edward', 'Cullen'), (34, 34, 'Fiona', 'Gallagher'),
+(35, 35, 'George', 'Bluth'), (36, 36, 'Hannah', 'Montana'),
+(37, 37, 'Indiana', 'Jones'), (38, 38, 'Jessica', 'Jones'),
+(39, 39, 'Kyle', 'Rayner'), (40, 40, 'Lois', 'Lane'),
+(41, 41, 'Mickey', 'Mouse'), (42, 42, 'Nancy', 'Drew'),
+(43, 43, 'Oscar', 'Wilde'), (44, 44, 'Pamela', 'Anderson'),
+(45, 45, 'Quincy', 'Jones'), (46, 46, 'Roger', 'Rabbit'),
+(47, 47, 'Sarah', 'Connor'), (48, 48, 'Tony', 'Stark'),
+(49, 49, 'Ulysses', 'Grant'), (50, 50, 'Vince', 'Lombardi');
+
 
 
 -- Verify Data
