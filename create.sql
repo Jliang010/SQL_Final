@@ -48,7 +48,7 @@ CONSTRAINT FK_TicketShowingID FOREIGN KEY (ShowingID) REFERENCES Showing (Showin
 CREATE TABLE Customer
 (
 CustomerID INT NOT NULL PRIMARY KEY,
-TicketID INT NOT NULL,
+TicketID INT NOT NULL UNIQUE,
 FirstName VARCHAR(60) NOT NULL,
 LastName VARCHAR(60) NOT NULL,
 
@@ -170,8 +170,20 @@ FROM Theater;
 SELECT *
 FROM Ticket;
 
---Question: What movies are PG13?
+--Question1: What movies are PG13?
 Select *
 FROM Movie
 WHERE Rating= 'PG13';
+
+--Question2: 
+
+SELECT s.ShowingID, m.Title AS MovieTitle, s.Date, sc.Format
+FROM Showing s
+INNER JOIN Screen sc ON s.ScreenID = sc.ScreenID
+INNER JOIN Theater t ON sc.TheaterID = t.TheaterID
+INNER JOIN Movie m ON s.MovieID = m.MovieID
+WHERE sc.Format = 'IMAX' AND t.City = 'San Diego';
+
+
+
 
