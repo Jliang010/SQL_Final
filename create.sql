@@ -148,3 +148,24 @@ INSERT INTO Customer (CustomerID, TicketID, FirstName, LastName) VALUES
 (10, 10, 'James', 'Taylor'),
 (11, 11, 'Sarah', 'Anderson'),
 (12, 12, 'Daniel', 'Thomas');
+
+
+-- Verify Data
+
+SELECT *
+FROM Customer;
+
+SELECT *
+FROM Movie;
+
+SELECT *
+FROM Screen;
+
+SELECT *
+FROM Showing;
+
+SELECT *
+FROM Theater;
+
+SELECT *
+FROM Ticket;
