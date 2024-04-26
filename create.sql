@@ -60,6 +60,7 @@ SET FOREIGN_KEY_CHECKS=1;
 
 
 -- Dummy data here
+
 -- Inserting data into the Theater table
 INSERT INTO Theater (TheaterID, TheaterName, City) VALUES
 (1, 'Cineworld Downtown', 'New York'),
@@ -280,12 +281,12 @@ INSERT INTO Customer (CustomerID, TicketID, FirstName, LastName) VALUES
 (49, 49, 'Ulysses', 'Grant'), (50, 50, 'Vince', 'Lombardi');
 
 
---Question1: What movies are PG13?
+-- Question1: What movies are PG13?
 Select *
 FROM Movie
 WHERE Rating= 'PG13';
 
---Question2: 
+-- Question2: What shows are being presented in IMAX at the San Diego Theater?
 SELECT s.ShowingID, m.Title AS MovieTitle, s.Date, sc.Format
 FROM Showing s
 INNER JOIN Screen sc ON s.ScreenID = sc.ScreenID
@@ -293,7 +294,7 @@ INNER JOIN Theater t ON sc.TheaterID = t.TheaterID
 INNER JOIN Movie m ON s.MovieID = m.MovieID
 WHERE sc.Format = 'IMAX' AND t.City = 'San Diego';
 
---Question3: 
+-- Question3: What are the total ticket sales at each theaeter for Ocean Deep?
 SELECT
     Theater.TheaterName,
     SUM(Ticket.Price) AS TotalTicketSales
