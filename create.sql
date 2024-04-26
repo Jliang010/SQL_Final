@@ -77,10 +77,10 @@ INSERT INTO Theater (TheaterID, TheaterName, City) VALUES
 -- Insert records into the Screen table
 INSERT INTO Screen (ScreenID, TheaterID, Format) VALUES
 (1, 1, 'Standard'),
-(2, 1, 'IMAX'),
+(2, 11, 'IMAX'),
 (3, 2, '4DX'),
 (4, 3, 'Standard'),
-(5, 3, 'IMAX'),
+(5, 12, 'IMAX'),
 (6, 4, '4DX'),
 (7, 5, 'Standard'),
 (8, 6, 'IMAX'),
