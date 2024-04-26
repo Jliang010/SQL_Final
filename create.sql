@@ -169,3 +169,9 @@ FROM Theater;
 
 SELECT *
 FROM Ticket;
+
+--Question: What movies are PG13?
+Select *
+FROM Movie
+WHERE Rating= 'PG13';
+
