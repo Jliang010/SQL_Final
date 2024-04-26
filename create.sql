@@ -232,13 +232,28 @@ FROM Movie
 WHERE Rating= 'PG13';
 
 --Question2: 
-
 SELECT s.ShowingID, m.Title AS MovieTitle, s.Date, sc.Format
 FROM Showing s
 INNER JOIN Screen sc ON s.ScreenID = sc.ScreenID
 INNER JOIN Theater t ON sc.TheaterID = t.TheaterID
 INNER JOIN Movie m ON s.MovieID = m.MovieID
 WHERE sc.Format = 'IMAX' AND t.City = 'San Diego';
+
+--Question3: 
+SELECT
+    Theater.TheaterName,
+    SUM(Ticket.Price) AS TotalTicketSales
+FROM
+    Ticket
+INNER JOIN Showing ON Ticket.ShowingID = Showing.ShowingID
+INNER JOIN Movie ON Showing.MovieID = Movie.MovieID
+INNER JOIN Screen ON Showing.ScreenID = Screen.ScreenID
+INNER JOIN Theater ON Screen.TheaterID = Theater.TheaterID
+WHERE
+    Movie.Title = 'Ocean Deep'
+GROUP BY
+    Theater.TheaterName;
+
 
 
 
