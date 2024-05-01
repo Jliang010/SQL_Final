@@ -286,13 +286,11 @@ Select *
 FROM Movie
 WHERE Rating= 'PG13';
 
--- Question2: What shows are being presented in IMAX at the San Diego Theater?
-SELECT s.ShowingID, m.Title AS MovieTitle, s.Date, sc.Format
+-- Question2: What are the movies rating for all showings?
+SELECT m.Rating, COUNT(*) AS RatingCount
 FROM Showing s
-INNER JOIN Screen sc ON s.ScreenID = sc.ScreenID
-INNER JOIN Theater t ON sc.TheaterID = t.TheaterID
-INNER JOIN Movie m ON s.MovieID = m.MovieID
-WHERE sc.Format = 'IMAX' AND t.City = 'San Diego';
+JOIN Movie m ON s.MovieID = m.MovieID
+GROUP BY m.Rating;
 
 -- Question3: What are the total ticket sales at each theaeter showing the movie Ocean Deep?
 SELECT
